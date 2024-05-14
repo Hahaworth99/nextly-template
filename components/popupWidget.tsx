@@ -17,7 +17,7 @@ const PopupWidget = () => {
 
   const userName = useWatch({ control, name: "name", defaultValue: "Someone" });
 
-  const onSubmit = async (data, e) => {
+  const onSubmit = async ( data : any, e : any) => {
     console.log(data);
     await fetch("https://api.web3forms.com/submit", {
       method: "POST",
@@ -157,7 +157,7 @@ const PopupWidget = () => {
                         />
                         {errors.name && (
                           <div className="mt-1 text-sm text-red-400 invalid-feedback">
-                            {errors.name.message}
+                            {errors.name.message && <>{errors.name.message}</>}
                           </div>
                         )}
                       </div>
@@ -188,7 +188,7 @@ const PopupWidget = () => {
 
                         {errors.email && (
                           <div className="mt-1 text-sm text-red-400 invalid-feedback">
-                            {errors.email.message}
+                            {errors.email.message && <>{errors.email.message}</>}
                           </div>
                         )}
                       </div>
@@ -201,7 +201,7 @@ const PopupWidget = () => {
                         </label>
 
                         <textarea
-                          rows="4"
+                          rows={4}
                           id="message"
                           {...register("message", {
                             required: "Enter your Message",
@@ -215,7 +215,7 @@ const PopupWidget = () => {
                           required></textarea>
                         {errors.message && (
                           <div className="mt-1 text-sm text-red-400 invalid-feedback">
-                            {errors.message.message}
+                            {errors.message && <>{errors.message.message}</>}
                           </div>
                         )}
                       </div>
