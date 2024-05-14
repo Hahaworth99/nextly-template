@@ -15,16 +15,6 @@ import PopupWidget from "../components/popupWidget";
 const Home = () => {
   return (
     <>
-      <Head>
-        <title>Nextly - Free Nextjs & TailwindCSS Landing Page Template</title>
-        <meta
-          name="description"
-          content="Nextly is a free landing page template built with next.js & Tailwind CSS"
-        />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <Navbar />
       <Hero />
       <SectionTitle
         pretitle="Nextly Benefits"
@@ -55,9 +45,6 @@ const Home = () => {
         conversion rate as well as support or chat requests.
       </SectionTitle>
       <Faq />
-      <Cta />
-      <Footer />
-      <PopupWidget />
     </>
   );
 }

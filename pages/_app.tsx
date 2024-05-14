@@ -1,11 +1,14 @@
 import { ThemeProvider } from "next-themes";
 import "../css/tailwind.css";
 import React from "react";
+import Layout from "./layout";
 
 function MyApp({ Component, pageProps }: { Component: React.ElementType, pageProps: any }) {
   return (
     <ThemeProvider attribute="class">
-      <Component {...pageProps} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </ThemeProvider>
   );
 }
